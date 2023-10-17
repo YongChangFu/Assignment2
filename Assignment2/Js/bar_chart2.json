@@ -1,0 +1,20 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "data": { "url": "https://raw.githubusercontent.com/YongChangFu/Assignment2/main/Assignment2/Data/country_wise_latest.csv"},
+    "title":"",
+    "width":800,
+    "height":400,
+    "mark": "bar",
+    "encoding": {
+      "row": {"field": "gender"},
+      "y": {
+        "aggregate": "sum", "field": "people",
+        "title": "population"
+      },
+      "x": {"field": "age"},
+      "color": {
+        "field": "gender",
+        "scale": {"range": ["#675193", "#ca8861"]}
+      }
+    }
+  }
