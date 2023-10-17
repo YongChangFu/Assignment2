@@ -7,16 +7,26 @@
   
 
   <link rel="stylesheet" type="text/css" href="css/main.css" media="all">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Display&family=Noto+Sans:wght@600&family=Roboto:wght@300&display=swap" rel="stylesheet">
   
 </head>
 <body>
     <div id="choropleth_map"></div>
-   
+    <div id="bar_chart"></div>
     <script type="text/javascript">
-    var spec2 = "js/choropleth_map.vg.json";
-    vegaEmbed('#choropleth_map', spec2).then(function(result) {
+    var spec1 = "js/choropleth_map.vg.json";
+
+    var spec2 = "js/bar.chart.json";
+    vegaEmbed('#choropleth_map', spec1).then(function(result) {
       // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
     }).catch(console.error);
+    vegaEmbed('#bar_chart', spec2).then(function(result) {
+        // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+      }).catch(console.error);
 </script>
 
 </body>
